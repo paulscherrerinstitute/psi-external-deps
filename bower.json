@@ -24,6 +24,9 @@
     "underscore-deep-extend": "~0.0.5",
     "vis": "vis#^4.9.0",
     "chance": "~0.8.0",
-    "jquery": "2.1.*"
+    "jquery": "2.1.*",
+    "selectize": "latest",
+    "microplugin": "~0.0.3",
+    "sifter": "~0.4.5"
   }
 }
