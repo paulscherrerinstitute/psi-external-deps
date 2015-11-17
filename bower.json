@@ -1,0 +1,29 @@
+{
+  "name": "psi-external-deps",
+  "version": "1.0.0",
+  "authors": [
+    "Paul Scherrer Institute"
+  ],
+  "description": "Defines non-bower javascript 3rd-party libraries.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "plotly"
+  ],
+  "main": "psi-external-deps.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/psi-external-deps/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "underscore": "underscore#^1.8",
+    "underscore-deep-extend": "~0.0.5",
+    "vis": "vis#^4.9.0",
+    "chance": "~0.8.0",
+    "jquery": "2.1.*"
+  }
+}
