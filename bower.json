@@ -27,6 +27,8 @@
     "jquery": "2.1.*",
     "selectize": "latest",
     "microplugin": "~0.0.3",
-    "sifter": "~0.4.5"
+    "sifter": "~0.4.5",
+    "materialize": "*"
+
   }
 }
