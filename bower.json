@@ -20,6 +20,9 @@
     "/demo/"
   ],
   "dependencies": {
+
+    "psi-common" : "master",
+
     "underscore": "underscore#^1.8",
     "underscore-deep-extend": "~0.0.5",
     "vis": "vis#^4.9.0",
