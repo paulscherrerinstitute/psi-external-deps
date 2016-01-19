@@ -32,6 +32,6 @@
     "sifter": "~0.4.5",
     "materialize": "*",
     "hammerjs": "*",
-    "smoment": "~2.11.1"
+    "moment": "~2.11.1"
   }
 }
