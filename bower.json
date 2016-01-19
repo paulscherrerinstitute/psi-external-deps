@@ -20,10 +20,8 @@
     "/demo/"
   ],
   "dependencies": {
-
     "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^1.0",
-    "psi-common" : "master",
-
+    "psi-common": "master",
     "underscore": "underscore#^1.8",
     "underscore-deep-extend": "~0.0.5",
     "vis": "vis#^4.9.0",
@@ -33,6 +31,7 @@
     "microplugin": "~0.0.3",
     "sifter": "~0.4.5",
     "materialize": "*",
-    "hammerjs": "*"
+    "hammerjs": "*",
+    "smoment": "~2.11.1"
   }
 }
