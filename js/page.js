@@ -60,6 +60,11 @@
   var hashbang = false;
 
   /**
+   * Literal value for the hashbang.
+   */
+  var HASHBANG_VALUE = '#!';
+
+  /**
    * Previous context, for capturing
    * page exit events.
    */
@@ -166,7 +171,7 @@
     }
     if (true === options.hashbang) hashbang = true;
     if (!dispatch) return;
-    var url = (hashbang && ~location.hash.indexOf('#!')) ? location.hash.substr(2) + location.search : location.pathname + location.search + location.hash;
+    var url = (hashbang && ~location.hash.indexOf(HASHBANG_VALUE)) ? location.hash.substr(2) + location.search : location.pathname + location.search + location.hash;
     page.replace(url, null, true, dispatch);
   };
 
@@ -327,7 +332,7 @@
     var current;
 
     if (hashbang) {
-      current = base + location.hash.replace('#!', '');
+      current = base + location.hash.replace(HASHBANG_VALUE, '');
     } else {
       current = location.pathname + location.search;
     }
@@ -377,12 +382,16 @@
    */
 
   function Context(path, state) {
-    if ('/' === path[0] && 0 !== path.indexOf(base)) path = base + (hashbang ? '#!' : '') + path;
+    if ('/' === path[0] && 0 !== path.indexOf(base)) {
+      path = base + (hashbang ? HASHBANG_VALUE : '') + path;
+    }
     var i = path.indexOf('?');
 
     this.canonicalPath = path;
     this.path = path.replace(base, '') || '/';
-    if (hashbang) this.path = this.path.replace('#!/', '') || '/';
+    if (hashbang) {
+      this.path = this.path.replace(HASHBANG_VALUE, '') || '/';
+    }
 
     this.title = document.title;
     this.state = state || {};
@@ -394,7 +403,9 @@
     // fragment
     this.hash = '';
     if (!hashbang) {
-      if (!~this.path.indexOf('#')) return;
+      if (!~this.path.indexOf('#')) {
+        return;
+      }
       var parts = this.path.split('#');
       this.path = parts[0];
       this.hash = decodeURLEncodedURIComponent(parts[1]) || '';
@@ -416,7 +427,7 @@
 
   Context.prototype.pushState = function() {
     page.len++;
-    history.pushState(this.state, this.title, hashbang && this.path !== '/' ? '#!' + this.path : this.canonicalPath);
+    history.pushState(this.state, this.title, hashbang && this.path !== '/' ? HASHBANG_VALUE + this.path : this.canonicalPath);
   };
 
   /**
@@ -426,7 +437,7 @@
    */
 
   Context.prototype.save = function() {
-    history.replaceState(this.state, this.title, hashbang && this.path !== '/' ? '#!' + this.path : this.canonicalPath);
+    history.replaceState(this.state, this.title, hashbang && this.path !== '/' ? HASHBANG_VALUE + this.path : this.canonicalPath);
   };
 
   /**
@@ -591,7 +602,9 @@
       path = path.substr(base.length);
     }
 
-    if (hashbang) path = path.replace('#!', '');
+    if (hashbang) {
+      path = path.replace(HASHBANG_VALUE, '');
+    }
 
     if (base && orig === path) return;
 
