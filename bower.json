@@ -34,6 +34,7 @@
     "hammerjs": "*",
     "moment": "~2.11.1",
     "pikaday-time": "master",
-    "qs": "^0.3.10"
+    "qs": "^0.3.10",
+    "element-resize-detector":"*"
   }
 }
