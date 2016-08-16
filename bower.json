@@ -22,6 +22,7 @@
     "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^1.0",
     "psi-common": "master",
     "underscore": "underscore#^1.8",
+    "underscore.string": "underscore.string#^3.2.1",
     "underscore-deep-extend": "~0.0.5",
     "vis": "vis#^4.9.0",
     "chance": "~0.8.0",
