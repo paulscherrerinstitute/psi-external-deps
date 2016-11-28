@@ -29,7 +29,6 @@
     "selectize": "^0.12.1",
     "microplugin": "~0.0.3",
     "sifter": "~0.5.2",
-    "materialize": "*",
     "hammerjs": "*",
     "moment": "~2.11.1",
     "pikaday-time": "master",
