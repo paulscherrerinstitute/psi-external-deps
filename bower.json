@@ -34,6 +34,7 @@
     "pikaday-time": "master",
     "qs": "^0.3.10",
     "element-resize-detector":"*",
-    "clipboard" : "clipboard#^1.5"
+    "clipboard" : "clipboard#^1.5",
+    "regression-js" : "^1.2"
   }
 }
