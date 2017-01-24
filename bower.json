@@ -35,6 +35,7 @@
     "qs": "^0.3.10",
     "element-resize-detector":"*",
     "clipboard" : "clipboard#^1.5",
-    "regression-js" : "^1.2"
+    "regression-js" : "^1.2",
+    "dropzone": "~4.0.1"
   }
 }
