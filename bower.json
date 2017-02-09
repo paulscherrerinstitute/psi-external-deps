@@ -36,6 +36,9 @@
     "element-resize-detector":"*",
     "clipboard" : "clipboard#^1.5",
     "regression-js" : "^1.2",
-    "dropzone": "~4.0.1"
+    "dropzone": "~4.0.1",
+    "mousetrap":"^1.6",
+    "bowser":"^1.6",
+    "plotly.js": "*"
   }
 }
