@@ -39,6 +39,6 @@
     "dropzone": "~4.0.1",
     "mousetrap":"^1.6",
     "bowser":"^1.6",
-    "plotly.js": "*"
+    "plotly.js": "^1.31.1"
   }
 }
