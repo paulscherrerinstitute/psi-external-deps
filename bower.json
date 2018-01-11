@@ -31,7 +31,7 @@
     "hammerjs": "*",
     "moment": "~2.18.1",
     "moment-range": "~3.0.3",
-    "pikaday-time": "master",
+    "pikaday-time": "paulscherrerinstitute/pikaday-time#master",
     "qs": "^0.3.10",
     "element-resize-detector":"*",
     "clipboard" : "clipboard#^1.5",
